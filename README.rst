@@ -149,3 +149,58 @@ There are several concepts to be aware of that factor into the potential inconsi
 
 Issues relating to inconsistencies will be closed as wontfix and without
 additional reason or context.
+
+
+我比较喜欢用debian/ubuntu，这里说下如何在VPS上面利用speedtest.net来测试当前VPS的网络上传和下载的速度。
+
+不废话：
+
+方法1：
+
+apt-get update
+
+apt-get install python-pip
+
+pip install speedtest-cli
+
+pip install speedtest-cli –-upgrade（本步骤可以省略）
+
+speedtest-cli
+
+方法2：
+
+wget https://github.com/sivel/speedtest-cli/archive/master.zip
+
+unzip master.zip
+
+cd speedtest-cli-master/
+
+chmod 755 speedtest_cli.py
+
+speedtest-cli
+
+ 
+
+想要结果精准到bits：
+
+speedtest-cli --bytes
+
+想分享或者保存结果：
+
+speedtest-cli --share
+
+只测试ping、上传、下载
+
+speedtest-cli --simple
+
+测试距离：
+
+speedtest-cli --list
+
+查看当前版本：
+
+speedtest-cli --version
+
+查看帮助命令
+
+speedtest-cli --help
